@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.4)  19 NOV 2026 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.4)  19 NOV 2026 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,6 +486,10 @@ e.tex
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
 
@@ -731,7 +735,7 @@ s is based on the non-relativistic Schrödinger
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}] [2]
-Overfull \hbox (0.70992pt too wide) in paragraph at lines 160--161
+Overfull \hbox (0.70992pt too wide) in paragraph at lines 188--189
 \T1/cmr/m/n/10.95 Many ob-serv-ables change abruptly at par-tic-u-lar pro-ton o
 r neu-tron num-bers $\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
 95 8\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 20\OML/cmm/m/it/10.95 ; \OT1/cmr/m
@@ -741,13 +745,32 @@ r neu-tron num-bers $\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
  []
 
 
-Overfull \hbox (10.74733pt too wide) detected at line 218
+LaTeX Warning: Reference `fig:S2n' on page 3 undefined on input line 193.
+
+
+LaTeX Warning: Reference `fig:E2plus' on page 3 undefined on input line 193.
+
+<s2n_s2p.png, id=151, 476.982pt x 534.798pt>
+File: s2n_s2p.png Graphic file (type png)
+<use s2n_s2p.png>
+Package pdftex.def Info: s2n_s2p.png  used on input line 201.
+(pdftex.def)             Requested size: 386.96027pt x 433.86948pt.
+
+LaTeX Warning: Reference `fig:E2plus' on page 3 undefined on input line 206.
+
+<e2plus.png, id=154, 476.982pt x 534.798pt>
+File: e2plus.png Graphic file (type png)
+<use e2plus.png>
+Package pdftex.def Info: e2plus.png  used on input line 210.
+(pdftex.def)             Requested size: 386.96027pt x 433.86948pt.
+[3] [4 <./s2n_s2p.png>] [5 <./e2plus.png>]
+Overfull \hbox (10.74733pt too wide) detected at line 269
 []
  []
 
-[3] [4] [5{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-[6] [7] [8] [9] [10] [11]
-Overfull \hbox (4.05356pt too wide) detected at line 725
+[6] [7] [8{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[9] [10] [11] [12] [13]
+Overfull \hbox (4.05356pt too wide) detected at line 776
 []  \OML/cmm/m/it/10.95 '[]\OT1/cmr/m/n/10.95 ([])  [][]\OMS/cmsy/m/n/10.95 !  
 [] [] \OML/cmm/m/it/10.95 '[]\OT1/cmr/m/n/10.95 ([] [])\OML/cmm/m/it/10.95 V\OT
 1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 ; [] []\OT1/cmr/m/n/10.95 )[]\OML/cmm/m/
@@ -756,15 +779,15 @@ it/10.95 '[]\OT1/cmr/m/n/10.95 ([] [])\OML/cmm/m/it/10.95 '[]\OT1/cmr/m/n/10.95
 L/cmm/m/it/10.95 '[]\OT1/cmr/m/n/10.95 ([] [])[]d[]\OML/cmm/m/it/10.95 r[]:
  []
 
-[12] [13] [14] [15]
-Overfull \hbox (9.51175pt too wide) detected at line 977
+[14] [15] [16] [17]
+Overfull \hbox (9.51175pt too wide) detected at line 1028
 \OT1/cmr/m/n/10.95 = [] [][]\OML/cmm/m/it/10.95 `\OT1/cmr/m/n/10.95 0 \OML/cmm/
 m/it/10.95 `\OT1/cmr/m/n/10.95 0[]\OML/cmm/m/it/10.95 L[]\OT1/cmr/m/n/10.95 0[]
 [] [] []
  []
 
-[16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
-Overfull \hbox (5.47914pt too wide) detected at line 1673
+[18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29]
+Overfull \hbox (5.47914pt too wide) detected at line 1724
 []\OML/cmm/m/it/10.95 [] \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 [][][] \
 OT1/cmr/m/n/10.95 = [] []2\OML/cmm/m/it/10.95 ^^V \OT1/cmr/m/n/10.95 2 [][]00[]
 \OML/cmm/m/it/10.95 [][] \OT1/cmr/m/n/10.95 = [](\OMS/cmsy/m/n/10.95 ^^@\OT1/
@@ -773,8 +796,8 @@ cmr/m/n/10.95 1)[][] \OML/cmm/m/it/10.95 [][] \OT1/cmr/m/n/10.95 = [] [] \OML
 /m/it/10.95 []\OMS/cmsy/m/n/10.95 j[]
  []
 
-[28]
-Overfull \hbox (2.35889pt too wide) detected at line 1690
+[30]
+Overfull \hbox (2.35889pt too wide) detected at line 1741
 \OT1/cmr/m/n/10.95 = [][]\OML/cmm/m/it/10.95 [] [] []\OT1/cmr/m/n/10.95 2\OML/
 cmm/m/it/10.95 ^^W \OT1/cmr/m/n/10.95 2 [][]20[]\OML/cmm/m/it/10.95 [][] \OT1
 /cmr/m/n/10.95 + \OML/cmm/m/it/10.95 [] [] []\OT1/cmr/m/n/10.95 2\OML/cmm/m/it
@@ -784,15 +807,15 @@ cmm/m/it/10.95 ^^W \OT1/cmr/m/n/10.95 2 [][]20[]\OML/cmm/m/it/10.95 [][] \OT1
 0.95 ^^W[][]\OT1/cmr/m/n/10.95 2 [][]\OML/cmm/m/it/10.95 [][][]
  []
 
-[29] [30] [31] [32]
-Overfull \hbox (0.35808pt too wide) detected at line 1938
+[31] [32] [33] [34]
+Overfull \hbox (0.35808pt too wide) detected at line 1989
 [][]\OML/cmm/m/it/10.95 ; [][] \OT1/cmr/m/n/10.95 = [](\OMS/cmsy/m/n/10.95 ^^@\
 OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 )[] [] +\OML/cmm/m/it/10.95 i[][] [] \OT
 1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^N[]^^N[]
  []
 
-[33] [34]
-Overfull \hbox (4.01561pt too wide) detected at line 2046
+[35] [36]
+Overfull \hbox (4.01561pt too wide) detected at line 2097
 \OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.9
 5 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/
 m/n/10.95 0[]) = \OML/cmm/m/it/10.95 ^^Z[]R[] [] \OT1/cmr/m/n/10.95 = [][]\OML/
@@ -800,30 +823,37 @@ cmm/m/it/10.95 R[][][][];  ^^Z \OT1/cmr/m/n/10.95 = [] = []\OML/cmm/m/it/10.95
 ;  ![] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 :
  []
 
-[35] [36]
-Overfull \hbox (2.91022pt too wide) in paragraph at lines 2137--2138
+[37] [38]
+Overfull \hbox (2.91022pt too wide) in paragraph at lines 2188--2189
 []\T1/cmr/m/n/10.95 The rigid-body value for a quadrupole-deformed nu-cleus is 
 ap-prox-i-mately $\OMS/cmsy/m/n/10.95 J[] ^^Y []\OML/cmm/m/it/10.95 AmR[]\OT1/c
 mr/m/n/10.95 (1 +
  []
 
-[37] [38] [39] [40] [41] (./NJSF064_block2_expanded.aux)
+[39] [40] [41] [42] [43] (./NJSF064_block2_expanded.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `NJSF064_block2_expanded.out' has not changed
 .
 (rerunfilecheck)             Checksum: A426FE1E7DC734C11C5D1C5C1C024204;7955.
  ) 
 Here is how much of TeX's memory you used:
- 24894 strings out of 474222
- 470004 string characters out of 5748734
+ 25016 strings out of 474222
+ 474218 string characters out of 5748734
  1956975 words of memory out of 5000000
- 46687 multiletter control sequences out of 15000+600000
+ 46799 multiletter control sequences out of 15000+600000
  575452 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,855b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,936b,849s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -848,10 +878,10 @@ onts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfti1095.pfb>
-Output written on NJSF064_block2_expanded.pdf (41 pages, 615385 bytes).
+Output written on NJSF064_block2_expanded.pdf (43 pages, 1269818 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 504 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 263 words of extra memory for PDF output out of 10000 (max. 10000000)
 
