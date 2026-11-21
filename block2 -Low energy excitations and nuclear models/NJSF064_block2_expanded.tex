@@ -30,6 +30,37 @@ The atomic nucleus is a system of $A$ strongly interacting fermions. Apart from 
 \section{Shell model of the nucleus}
 %=====================================================================
 
+
+\subsection{Experimental evidence for a mean field}
+
+%--- expanded text ---
+%Many observables change abruptly at particular proton or neutron numbers $2,8,20,28,50,82,126$: two-nucleon separation energies drop suddenly after these numbers, the energies of the first $2^+$ states (which are usually lowest excitations) in even-even nuclei are particularly high. This behaviour closely resembles the ionization energies of atoms at the noble gases and suggests that nucleons, like electrons in atoms, occupy groups of nearly degenerate levels (\emph{shells}) separated by large energy gaps.
+
+The experimental evidence suggesting a mean-field-like picture present in nuclei is deduced from the observation of "magic" numbers. The existence of such special numbers of protons or neutrons indicates that nucleons fill specific energy levels (shells) in a way that is similar to the filling of electron shells in atoms. Examples of experimental signatures of shell closures are shown in Figs.~\ref{fig:S2n} and~\ref{fig:E2plus}. The two-neutron and two-proton separation energies, and the energy of the first excited $2^+$ state in even-even nuclei, show abrupt changes at magic numbers. This behaviour can be explained, as we will see, by the presence of large energy gaps between filled shells and the next available levels within simple mean-field descriptions of the nucleus with a properly chosen potential.
+%--- magic-number plots ---
+The two-neutron and two-proton separation energies
+\[
+S_{2n}(A,Z)=B(A,Z)-B(A-2,Z),\qquad S_{2p}(A,Z)=B(A,Z)-B(A-2,Z-2)
+\]
+are the energies needed to remove two neutrons (protons) from the nucleus; removing a \emph{pair} of nucleons eliminates the odd-even staggering caused by pairing. Along an isotopic chain $S_{2n}$ decreases smoothly with increasing $N$, as expected from the liquid-drop (Bethe--Weizs\"acker) formula, but it drops abruptly just after $N=28,50,82,126$: the two neutrons added beyond a closed shell have to occupy the next, considerably less bound shell. The same behaviour of $S_{2p}$ is seen after $Z=50$ and $Z=82$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{s2n_s2p.png}
+    \caption{Two-neutron separation energies $S_{2n}$ along isotopic chains (top) and two-proton separation energies $S_{2p}$ along isotonic chains (bottom) for even-even nuclei. Dashed lines mark the magic numbers. Data: AME2020 atomic mass evaluation (experimental masses only).}
+    \label{fig:S2n}
+\end{figure}
+
+The energy of the first excited $2^+$ state in even-even nuclei (Fig.~\ref{fig:E2plus}) also shows striking pattern. In most nuclei $E(2^+_1)$ lies well below $1$~MeV, and far from closed shells (rare earths, actinides) it decreases to $\sim 100$~keV and below --- these are the collective rotational states discussed in Sec.~\ref{sec:rot}. For a magic number of protons or neutrons, however, $E(2^+_1)$ shows sharp peaks, and in the doubly magic nuclei $^{16}$O, $^{40}$Ca, $^{48}$Ca, $^{132}$Sn and $^{208}$Pb it reaches $3$--$7$~MeV: to excite such a nucleus a nucleon has to be promoted across the shell gap. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{e2plus.png}
+    \caption{Excitation energy of the first $2^+$ state in even-even nuclei as a function of the neutron number (top) and proton number (bottom), logarithmic scale. Grey points: all even-even nuclei; coloured lines: chains with a magic number of protons (top) or neutrons (bottom). Data: ENSDF, retrieved via the IAEA LiveChart of Nuclides (same data as NuDat).}
+    \label{fig:E2plus}
+\end{figure}
+
+
 %--- expanded text ---
 
 The conventional microscopic description of the nucleus is based on the non-relativistic Schr\"odinger equation with a proper interaction. 
@@ -182,35 +213,6 @@ An independent-particle picture seems unreasonable for nuclei: the $NN$ interact
 The question which naturally arises is how to determine an uknown mean-field potential. Historically, phenomenological potentials were used, such as the harmonic oscillator, the infinite square well, or the Woods--Saxon potential. In modern approaches, self-consistent mean-field potentials have been derived from effective interactions (Skyrme, Gogny, relativistic mean field). In this block we will resctrict ourselves to the phenomenological potentials, which are sufficient to explain the many features of low-energy nuclear structure.
 
 
-\subsection{Experimental evidence for a mean field}
-
-%--- expanded text ---
-Many observables change abruptly at particular proton or neutron numbers $2,8,20,28,50,82,126$: two-nucleon separation energies drop suddenly after these numbers, the energies of the first $2^+$ states in even-even nuclei are particularly high and the corresponding $B(E2)$ values small, and nuclei with these numbers have an unusually large number of stable isotopes or isotones. This behaviour closely resembles the ionization energies of atoms at the noble gases and suggests that nucleons, like electrons in atoms, occupy groups of nearly degenerate levels (\emph{shells}) separated by large energy gaps.
-
-The experimental evidence for a mean field is the \textbf{shell structure} of nuclei: there are ``magic'' numbers similar to atomic systems.
-
-%--- magic-number plots ---
-Two particularly clear signatures of shell closures are shown in Figs.~\ref{fig:S2n} and~\ref{fig:E2plus}. The two-neutron and two-proton separation energies
-\[
-S_{2n}(A,Z)=B(A,Z)-B(A-2,Z),\qquad S_{2p}(A,Z)=B(A,Z)-B(A-2,Z-2)
-\]
-are the energies needed to remove two neutrons (protons) from the nucleus; removing a \emph{pair} of nucleons eliminates the odd-even staggering caused by pairing. Along an isotopic chain $S_{2n}$ decreases smoothly with increasing $N$, as expected from the liquid-drop (Bethe--Weizs\"acker) formula, but it drops abruptly just after $N=28,50,82,126$: the two neutrons added beyond a closed shell have to occupy the next, considerably less bound shell. The same behaviour of $S_{2p}$ is seen after $Z=50$ and $Z=82$.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\linewidth]{s2n_s2p.png}
-    \caption{Two-neutron separation energies $S_{2n}$ along isotopic chains (top) and two-proton separation energies $S_{2p}$ along isotonic chains (bottom) for even-even nuclei. Dashed lines mark the magic numbers. Data: AME2020 atomic mass evaluation (experimental masses only).}
-    \label{fig:S2n}
-\end{figure}
-
-The energy of the first excited $2^+$ state in even-even nuclei (Fig.~\ref{fig:E2plus}) shows an even more striking pattern. In most nuclei $E(2^+_1)$ lies well below $1$~MeV, and far from closed shells (rare earths, actinides) it decreases to $\sim 100$~keV and below --- these are the collective rotational states discussed in Sec.~\ref{sec:rot}. For a magic number of protons or neutrons, however, $E(2^+_1)$ shows sharp peaks, and in the doubly magic nuclei $^{16}$O, $^{40}$Ca, $^{48}$Ca, $^{132}$Sn and $^{208}$Pb it reaches $3$--$7$~MeV: to excite such a nucleus a nucleon has to be promoted across the shell gap. Far from stability the shell structure may change: e.g.\ $^{32}$Mg ($N=20$) has a low-lying $2^+$ state (the $N=20$ shell closure disappears in the ``island of inversion''), whereas $^{24}$O shows a high $2^+$ state signalling a new shell closure at $N=16$.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\linewidth]{e2plus.png}
-    \caption{Excitation energy of the first $2^+$ state in even-even nuclei as a function of the neutron number (top) and proton number (bottom), logarithmic scale. Grey points: all even-even nuclei; coloured lines: chains with a magic number of protons (top) or neutrons (bottom). Data: ENSDF, retrieved via the IAEA LiveChart of Nuclides (same data as NuDat).}
-    \label{fig:E2plus}
-\end{figure}
 
 Reminder: solutions of the Schr\"odinger equation for a spherical potential $U(r)$,
 \[
