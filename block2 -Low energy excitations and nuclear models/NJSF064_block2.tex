@@ -288,6 +288,37 @@ $N$ & $n$ & $\ell$ & & shell & parity \\ \hline
 \end{tabular}
 \end{center}
 
+%--- radial wave functions plot ---
+\paragraph{Radial wave functions.} The lowest radial wave functions $R_{n\ell}(r)$ of the infinite square well and of the harmonic oscillator, normalized as $\int_0^\infty R_{n\ell}^2(r)\,r^2\,\ud r=1$, are compared in Fig.~\ref{fig:radial}. In both cases $R_{n\ell}$ has $n-1$ nodes for $0<r<R$ (square well) or $0<r<\infty$ (HO), and close to the origin $R_{n\ell}\sim r^\ell$: the centrifugal term $\ell(\ell+1)/r^2$ pushes the states with higher $\ell$ outwards, and only the $s$-states are nonzero at $r=0$. The two potentials differ at the surface: in the infinite well the wave function is forced to vanish at $r=R$, whereas the HO wave functions decay smoothly as $e^{-\nu^2r^2/2}$ beyond the classical turning point. A realistic nuclear potential (Woods--Saxon, below) lies between these two limits: it has a sharp, but diffuse surface, and the bound-state wave functions decay exponentially outside the nucleus.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{radial_wf.png}
+    \caption{Radial wave functions $R_{n\ell}(r)$ with $n=1,2,3$ and $\ell=0,1,2$ for the infinite square well of radius $R$ (top, in units of $R^{-3/2}$) and for the harmonic oscillator (bottom, in units of $\nu^{3/2}$, $\nu=\sqrt{m\omega/\hbar}$).}
+    \label{fig:radial}
+\end{figure}
+
+%--- density profiles plot ---
+\paragraph{Density profiles.} The density of $A_f$ fermions occupying the lowest orbits is obtained by summing the contributions of all occupied single-particle states,
+\[
+\rho(r)=\sum_{i\in\text{occ}}|\varphi_i(\vec r)|^2=\frac{1}{4\pi}\sum_{n\ell j\in\text{occ}}(2j+1)\,R_{n\ell}^2(r),
+\]
+where we used $\sum_m|Y_{\ell m}|^2=(2\ell+1)/4\pi$ and the factor $2j+1$ counts the states of a filled $j$-orbit. Figure~\ref{fig:density} shows the densities of $A_f=8,20,28,50,82,126$ fermions (protons or neutrons) in the harmonic oscillator and in the infinite square well. The orbits are filled in the realistic order including the spin-orbit splitting (see below), so that all six systems have closed orbits and spherical densities; the radial functions depend only on $n,\ell$. Each system is regarded as one kind of nucleons in an $N=Z$ nucleus with $A=2A_f$ and radius $R=r_0A^{1/3}$, $r_0=1.2$~fm. The parameters $\hbar\omega$ and $R_{\rm sw}$ are fixed by requiring that the mean square radius equals that of a uniform sphere of radius $R$, $\braket{r^2}=\frac35R^2$. For the HO,
+\[
+\braket{r^2}=\frac{1}{A_f}\frac{\hbar}{m\omega}\sum_{n\ell j\in\text{occ}}(2j+1)\Big(N+\frac32\Big),
+\qquad N=2(n-1)+\ell,
+\]
+which gives $\hbar\omega=17.0$, $12.3$, \dots, $6.6$~MeV, close to the empirical estimate $\hbar\omega\approx41A^{-1/3}$~MeV. The dashed line marks the equivalent sharp radius $R_{\rm eq}=\sqrt{\frac53\braket{r^2}_{\rm HO}}=R$.
+
+Both densities oscillate in the interior, reflecting the shell structure (e.g.\ the central dip for $A_f=8$, where only the $1s$ orbit contributes at $r=0$). The HO density is too large in the centre and has a long Gaussian tail, whereas the square-well density is cut off sharply at $r=R_{\rm sw}$. Neither reproduces the experimentally observed nuclear density --- approximately constant in the interior (saturation) with a diffuse surface of thickness $\approx2$--$2.5$~fm --- which motivates the Woods--Saxon potential discussed below.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{density_profiles.png}
+    \caption{Density profiles of $A_f$ spin-$\frac12$ fermions in the harmonic oscillator (blue) and the infinite square well (red), with $\hbar\omega$ and $R_{\rm sw}$ fixed by $\braket{r^2}=\frac35R^2$, $R=1.2\,(2A_f)^{1/3}$~fm. Orbits are filled in the spin-orbit order ($1s_{1/2}$, $1p_{3/2}$, $1p_{1/2}$, $1d_{5/2}$, \dots). The dashed line is the equivalent sharp radius $R_{\rm eq}=\sqrt{5\braket{r^2}_{\rm HO}/3}$.}
+    \label{fig:density}
+\end{figure}
+
 \paragraph{Degeneracy of HO shells.} For a major shell $N$ we have $\ell=N-2(n-1)$, i.e.\ $2\ell+1=2N-4n+5$. Including the factor 2 for spin:
 
 $N$ even ($n=1,\dots,N/2+1$):

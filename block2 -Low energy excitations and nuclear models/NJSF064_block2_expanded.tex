@@ -33,8 +33,11 @@ The atomic nucleus is a system of $A$ strongly interacting fermions. Apart from 
 
 \subsection{Experimental evidence for a mean field}
 
-Experimental evidence supporting a mean-field description of atomic nuclei is closely associated with the observation of nuclear "magic" numbers. The existence of specific proton or neutron numbers that confer enhanced stability suggests that nucleons occupy discrete energy levels, or shells, analogous to the arrangement of electrons in atomic orbitals. Representative experimental observables that reveal shell structure are shown in Figs.~\ref{fig:S2n} and~\ref{fig:E2plus}. In particular, two-neutron and two-proton separation energies, as well as the energies of the first excited $2^+$ states in even-even nuclei, exhibit pronounced discontinuities at magic numbers. As discussed below, these features can be understood as consequences of large energy gaps separating fully occupied shells from the next available single-particle levels, within the framework of independent nucleons moving in an effective attractive potential.
+%--- expanded text ---
+%Many observables change abruptly at particular proton or neutron numbers $2,8,20,28,50,82,126$: two-nucleon separation energies drop suddenly after these numbers, the energies of the first $2^+$ states (which are usually lowest excitations) in even-even nuclei are particularly high. This behaviour closely resembles the ionization energies of atoms at the noble gases and suggests that nucleons, like electrons in atoms, occupy groups of nearly degenerate levels (\emph{shells}) separated by large energy gaps.
 
+The experimental evidence suggesting a mean-field-like picture present in nuclei is deduced from the observation of "magic" numbers. The existence of such special numbers of protons or neutrons indicates that nucleons fill specific energy levels (shells) in a way that is similar to the filling of electron shells in atoms. Examples of experimental signatures of shell closures are shown in Figs.~\ref{fig:S2n} and~\ref{fig:E2plus}. The two-neutron and two-proton separation energies, and the energy of the first excited $2^+$ state in even-even nuclei, show abrupt changes at magic numbers. This behaviour can be explained, as we will see, by the presence of large energy gaps between filled shells and the next available levels within simple mean-field descriptions of the nucleus with a properly chosen potential.
+%--- magic-number plots ---
 The two-neutron and two-proton separation energies
 \[
 S_{2n}(A,Z)=B(A,Z)-B(A-2,Z),\qquad S_{2p}(A,Z)=B(A,Z)-B(A-2,Z-2)
@@ -48,8 +51,7 @@ are the energies needed to remove two neutrons (protons) from the nucleus; remov
     \label{fig:S2n}
 \end{figure}
 
-
-The systematics of energies of the first excited $2^+$ state in even-even nuclei (Fig.~\ref{fig:E2plus}) also shows striking pattern. In most nuclei $E(2^+_1)$ lies well below $1$~MeV, and far from closed shells (rare earths, actinides) it decreases to $\sim 100$~keV and below. These low-lying states are the collective rotational states and will be discussed later in context of collective models. For a magic number of protons or neutrons, however, $E(2^+_1)$ shows sharp peaks, and in the doubly magic nuclei $^{16}$O, $^{40}$Ca, $^{48}$Ca, $^{132}$Sn and $^{208}$Pb it reaches $3$--$7$~MeV. 
+The energy of the first excited $2^+$ state in even-even nuclei (Fig.~\ref{fig:E2plus}) also shows striking pattern. In most nuclei $E(2^+_1)$ lies well below $1$~MeV, and far from closed shells (rare earths, actinides) it decreases to $\sim 100$~keV and below --- these are the collective rotational states discussed in Sec.~\ref{sec:rot}. For a magic number of protons or neutrons, however, $E(2^+_1)$ shows sharp peaks, and in the doubly magic nuclei $^{16}$O, $^{40}$Ca, $^{48}$Ca, $^{132}$Sn and $^{208}$Pb it reaches $3$--$7$~MeV: to excite such a nucleus a nucleon has to be promoted across the shell gap. 
 
 \begin{figure}[htbp]
     \centering
@@ -60,8 +62,8 @@ The systematics of energies of the first excited $2^+$ state in even-even nuclei
 
 
 %--- expanded text ---
-\subsection{Simplest shell model: nucleons in a spherical attractive potential well}
-The conventional microscopic description of the nucleus is based on the non-relativistic Schr\"odinger equation with a proper interaction. 
+\subsection{Simplect shell model: nucleons in a mean-field potential}
+A microscopic description of the nucleus is based on the non-relativistic Schr\"odinger equation with a proper interaction. 
 \[
 i\hbar\frac{\partial\Psi}{\partial t}=\op H\Psi ,
 \]
@@ -100,7 +102,7 @@ If we neglect $\op V_{\rm res}$, the problem reduces to a 1-body problem:
 %--- expanded text ---
 
 
-The nucleons are fermions, and, therefore  Pauli exclusion principle must be employed, i.e. each single-particle state $\varphi_i$ with corresponding energy $\varepsilon_i$, can be occupied by one nucleon, at most.  
+The nucleons are fermions, and, therefore, occupy single-particle levels $\varphi_i$ with energies $\varepsilon_i$ in a potential well, but due to the Pauli principle no two nucleons can occupy the same state. 
 \begin{center}
 \begin{tikzpicture}[xscale=1.0,yscale=1.3,
   declare function={
@@ -161,7 +163,7 @@ where the sum runs over all permutations $P$ of particle indices. Equivalently, 
 If $\braket{\varphi_i|\varphi_j}=\delta_{ij}$, then $\braket{\Phi|\Phi}=1$.
 The determinant vanishes if two columns are identical, i.e.\ if two nucleons occupy the same single-particle state: the Slater determinant automatically incorporates the Pauli principle. 
 
-In the lowest state (which, hopefully, is a reasonable appoximation to true ground state) the nucleons fill the lowest levels of the mean-field potential $\op U$ up to the Fermi energy $\varepsilon_F$.
+In the lowest state, which,hopefully is a reasonble approximation to the true ground state, the nucleons fill the lowest levels of the mean-field potential $\op U$ up to the Fermi energy $\varepsilon_F$:
 \begin{center}
 \begin{tikzpicture}[xscale=1.0,yscale=1.3,
   declare function={Uws(\x)=-3/(1+exp((abs(\x)-2)/0.35));},
@@ -206,33 +208,35 @@ In the lowest state (which, hopefully, is a reasonable appoximation to true grou
 \end{tikzpicture}
 \end{center}
 
-An independent-particle picture seems unreasonable for nuclei: the $NN$ interaction is strong and of short range, and nucleons inside the nucleus are packed densely. Nevertheless, the Pauli principle strongly suppresses collisions between nucleons in the ground state and in low-lying states, because a nucleon below the Fermi energy cannot scatter into states that are already occupied. As a consequence, the mean free path of a nucleon in nuclear matter is comparable to, or larger than, the nuclear size, and each nucleon can be viewed as moving in an average potential generated by all the other 
-nucleons.
+An independent-particle picture seems unreasonable for nuclei: the $NN$ interaction is strong and of short range, and nucleons inside the nucleus are packed densely. Nevertheless, the Pauli principle strongly suppresses collisions between nucleons in the ground state and in low-lying states: a nucleon below the Fermi energy cannot scatter into states that are already occupied. As a consequence, the mean free path of a nucleon in nuclear matter is comparable to, or larger than, the nuclear size, and each nucleon can be viewed as moving in an average potential generated by all the other nucleons.
 
-A natural question that arises is how to determine the mean-field potential when it is not known a priori. Historically, this problem was addressed using phenomenological potentials, such as the harmonic oscillator, the infinite square well, and the Woods-Saxon potential. More recently, self-consistent mean-field potentials have been derived from effective interactions, including the Skyrme, Gogny, and relativistic mean-field models. In this section, however, we restrict our discussion to phenomenological potentials, which are sufficient for explaining many of the key features of low-energy nuclear structure.
+The question which naturally arises is how to determine an uknown mean-field potential. Historically, phenomenological potentials were used, such as the harmonic oscillator, the infinite square well, or the Woods--Saxon potential. In modern approaches, self-consistent mean-field potentials have been derived from effective interactions (Skyrme, Gogny, relativistic mean field). In this block we will resctrict ourselves to the phenomenological potentials, which are sufficient to explain the many features of low-energy nuclear structure.
 
+We will remind now the solutions of the Schr\"odinger equation for a spherical potential $U(r)$ in spherical coordinates, in particular the radial wave functions and energies of the infinite square well and of the harmonic oscillator. 
 
-Let us begin by reviewing the solutions of the Schrödinger equation for a spherically symmetric potential $U(r)$. It is convenient to solve it in spherical coordinates, i.e. 
+Let us consider a single nucleon of mass $m$ in a spherical potential $U(r)$. 
+The stationary Schr\"odinger equation reads
+
 \[
 \Big[-\frac{\hbar^2}{2m}\Delta+U\Big]\varphi_{n\ell}=E_{n\ell}\,\varphi_{n\ell},
 \qquad
 \Delta=\frac{\partial^2}{\partial r^2}+\frac2r\frac{\partial}{\partial r}-\frac{\op{\vec\ell}^{\,2}}{\hbar^2r^2}.
 \]
-with 
+In spherical coordinates the wave function can be separated into a radial and an angular part,
 \[
 \varphi_{n\ell m}=R_{n\ell}(r)\,Y_{\ell m}(\vartheta,\varphi),
 \]
-The radial equation takes the form
+where radial part is the solution to the radial equation
 \[
 \Big[\frac{\ud^2}{\ud r^2}+\frac2r\frac{\ud}{\ud r}-\frac{\ell(\ell+1)}{r^2}+\frac{2m}{\hbar^2}\big(E_{n\ell}-U\big)\Big]R_{n\ell}=0,
 \]
-and angular part has well-known solutions corresponding to eigenstates of orbital angular momentum  
+and angular part is given by the spherical harmonics $Y_{\ell m}$, which are eigenfunctions of the angular momentum operator $\op{\vec\ell}^{\,2}$:
 \[
 \op{\vec\ell}^{\,2}\,Y_{\ell m}(\vartheta,\varphi)=\hbar^2\ell(\ell+1)\,Y_{\ell m}(\vartheta,\varphi),
 \qquad \ell=0,1,2,\dots,\quad m=-\ell,\dots,0,\dots,\ell .
 \]
 
-Let's discuss now, two, analytically solvable potentials:
+Let's now consider two simple potentials, the infinite square well and the harmonic oscillator, which are often used in nuclear physics as a first approximation to the mean-field potential.
 
 \subsubsection*{Infinite square well}
 \[
@@ -283,9 +287,11 @@ with $k_{n\ell}R$ the $n$-th root of $j_\ell$.
 Note that in nuclear physics $n=1,2,\dots$ counts the radial nodes ($n-1$ nodes for $r>0$), so that, contrary to atomic physics, all values of $\ell$ are allowed for a given $n$. Ordering the states by the roots of the spherical Bessel functions gives the sequence $1s,1p,1d,2s,1f,2p,1g,\dots$ 
 
 \subsubsection*{Harmonic oscillator}
+Lets now consider spherical harmonic oscillator potential
 \[
 U(r)=\tfrac12 m\omega^2r^2-U_0 ,
 \]
+Radial solutions are given by
 \[
 R_{n\ell}(r)=N_{n\ell}\,(\nu r)^\ell\,e^{-\nu^2r^2/2}\,L_{n-1}^{\ell+1/2}(\nu^2r^2),
 \qquad \nu=\sqrt{\frac{m\omega}{\hbar}},
@@ -295,8 +301,7 @@ where $L_{n}^{\alpha}$ are the associated Laguerre polynomials. The energies are
 E_{n\ell}=\hbar\omega\Big(N+\frac32\Big)-U_0,
 \qquad N=2(n-1)+\ell,\quad N=0,1,2,\dots
 \]
-where $N$ is the principal quantum number and $n=1,2,\dots$ the radial quantum number. The levels are equidistant ($0\hbar\omega$, $1\hbar\omega$, $2\hbar\omega$, \dots) and the parity of a state is $(-1)^\ell$, because
-
+where $N$ is the principal quantum number and $n=1,2,\dots$ the radial quantum number. The levels are equidistant ($0\hbar\omega$, $1\hbar\omega$, $2\hbar\omega$, \dots).
 %--- expanded text ---
 The harmonic oscillator is a reasonable first approximation, because any smooth potential with a minimum is harmonic close to its bottom. Its spectrum has a large degeneracy: all states with the same $N=2(n-1)+\ell$ have the same energy. From the condition that the mean square radius of the HO ground state reproduces the nuclear size one obtains the commonly used estimate $\hbar\omega\approx41A^{-1/3}$~MeV.
 
@@ -315,6 +320,16 @@ $N$ & $n$ & $\ell$ & & shell & parity \\ \hline
   & 1 & 4 & $1g$ & & $+$ \\ \hline
 \end{tabular}
 \end{center}
+
+%--- radial wave functions plot ---
+\paragraph{Radial wave functions.} The lowest radial wave functions $R_{n\ell}(r)$ of the infinite square well and of the harmonic oscillator, normalized as $\int_0^\infty R_{n\ell}^2(r)\,r^2\,\ud r=1$, are compared in Fig.~\ref{fig:radial}. In both cases $R_{n\ell}$ has $n-1$ nodes for $0<r<R$ (square well) or $0<r<\infty$ (HO), and close to the origin $R_{n\ell}\sim r^\ell$: the centrifugal term $\ell(\ell+1)/r^2$ pushes the states with higher $\ell$ outwards, and only the $s$-states are nonzero at $r=0$. The two potentials differ at the surface: in the infinite well the wave function is forced to vanish at $r=R$, whereas the HO wave functions decay smoothly as $e^{-\nu^2r^2/2}$ beyond the classical turning point. A realistic nuclear potential (Woods--Saxon, below) lies between these two limits: it has a sharp, but diffuse surface, and the bound-state wave functions decay exponentially outside the nucleus.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{radial_wf.png}
+    \caption{Radial wave functions $R_{n\ell}(r)$ with $n=1,2,3$ and $\ell=0,1,2$ for the infinite square well of radius $R$ (top, in units of $R^{-3/2}$) and for the harmonic oscillator (bottom, in units of $\nu^{3/2}$, $\nu=\sqrt{m\omega/\hbar}$).}
+    \label{fig:radial}
+\end{figure}
 
 \paragraph{Degeneracy of HO shells.} For a major shell $N$ we have $\ell=N-2(n-1)$, i.e.\ $2\ell+1=2N-4n+5$. Including the factor 2 for spin:
 
@@ -355,7 +370,7 @@ Magic numbers
 Comparing with the experimental magic numbers $2,8,20,28,50,82,126$, we see that both potentials reproduce only the first three. The higher magic numbers cannot be explained by a central potential alone, whatever its radial shape.
 
 
-\subsubsection*{``Realistic'' case: Woods--Saxon potential}
+\subsubsection*{Realistic case: Woods--Saxon potential}
 \[
 U(r)=-\frac{V_0}{1+e^{(r-R)/a}}
 \]
