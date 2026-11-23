@@ -229,7 +229,7 @@ U(r)=\begin{cases}-U_0, & r\le R,\\ \infty, & r>R,\end{cases}
 \end{center}
 The regular solution inside the well is given by spherical Bessel functions $j_\ell$,
 \[
-R_{n\ell}(r)=N_{n\ell}\sqrt{\frac{2k_{n\ell}r}{\pi}}\;j_\ell(k_{n\ell}r),
+R_{n\ell}(r)=N_{n\ell}\,j_\ell(k_{n\ell}r),
 \qquad
 k_{n\ell}^2=\frac{2m}{\hbar^2}\big(E_{n\ell}+U_0\big).
 \]
@@ -251,7 +251,7 @@ Eigenstates:
 where $E_{10}=\frac{\hbar^2}{2m}k_{10}^2-U_0$, etc.
 The wave functions are
 \[
-\varphi_{n\ell m}(r,\vartheta,\varphi)=N_{n\ell}\sqrt{\frac{2k_{n\ell}r}{\pi}}\;j_\ell(k_{n\ell}r)\,Y_{\ell m}(\vartheta,\varphi),
+\varphi_{n\ell m}(r,\vartheta,\varphi)=N_{n\ell}\,j_\ell(k_{n\ell}r)\,Y_{\ell m}(\vartheta,\varphi),
 \]
 \[
 n=1,2,\dots,\quad \ell=0,1,2,\dots,\quad m=-\ell,\dots,\ell,
@@ -303,19 +303,19 @@ $N$ & $n$ & $\ell$ & & shell & parity \\ \hline
 \[
 \rho(r)=\sum_{i\in\text{occ}}|\varphi_i(\vec r)|^2=\frac{1}{4\pi}\sum_{n\ell j\in\text{occ}}(2j+1)\,R_{n\ell}^2(r),
 \]
-where we used $\sum_m|Y_{\ell m}|^2=(2\ell+1)/4\pi$ and the factor $2j+1$ counts the states of a filled $j$-orbit. Figure~\ref{fig:density} shows the densities of $A_f=8,20,28,50,82,126$ fermions (protons or neutrons) in the harmonic oscillator and in the infinite square well. The orbits are filled in the realistic order including the spin-orbit splitting (see below), so that all six systems have closed orbits and spherical densities; the radial functions depend only on $n,\ell$. Each system is regarded as one kind of nucleons in an $N=Z$ nucleus with $A=2A_f$ and radius $R=r_0A^{1/3}$, $r_0=1.2$~fm. The parameters $\hbar\omega$ and $R_{\rm sw}$ are fixed by requiring that the mean square radius equals that of a uniform sphere of radius $R$, $\braket{r^2}=\frac35R^2$. For the HO,
+where we used $\sum_m|Y_{\ell m}|^2=(2\ell+1)/4\pi$ and the factor $2j+1$ counts the states of a filled $j$-orbit. Figure~\ref{fig:density} shows the densities of $A_f=8,20,28,50,82,126$ fermions (protons or neutrons) in the harmonic oscillator, in the infinite square well and in a Woods--Saxon potential (introduced below). The orbits are filled in the realistic order including the spin-orbit splitting (see below), so that all six systems have closed orbits and spherical densities; the radial functions depend only on $n,\ell$. Each system is regarded as one kind of nucleons in an $N=Z$ nucleus with $A=2A_f$ and radius $R=r_0A^{1/3}$, $r_0=1.2$~fm. The parameters $\hbar\omega$ and $R_{\rm sw}$ are fixed by requiring that the mean square radius equals that of a uniform sphere of radius $R$, $\braket{r^2}=\frac35R^2$. For the HO,
 \[
 \braket{r^2}=\frac{1}{A_f}\frac{\hbar}{m\omega}\sum_{n\ell j\in\text{occ}}(2j+1)\Big(N+\frac32\Big),
 \qquad N=2(n-1)+\ell,
 \]
-which gives $\hbar\omega=17.0$, $12.3$, \dots, $6.6$~MeV, close to the empirical estimate $\hbar\omega\approx41A^{-1/3}$~MeV. The dashed line marks the equivalent sharp radius $R_{\rm eq}=\sqrt{\frac53\braket{r^2}_{\rm HO}}=R$.
+which gives $\hbar\omega=17.0$, $12.3$, \dots, $6.6$~MeV, close to the empirical estimate $\hbar\omega\approx41A^{-1/3}$~MeV. The dashed line marks the equivalent sharp radius $R_{\rm eq}=\sqrt{\frac53\braket{r^2}_{\rm HO}}=R$. The Woods--Saxon potential is not rescaled: it has the typical parameters $V_0=50$~MeV, $R_{\rm WS}=1.27\,A^{1/3}$~fm, $a=0.67$~fm, and its eigenfunctions are obtained numerically.
 
-Both densities oscillate in the interior, reflecting the shell structure (e.g.\ the central dip for $A_f=8$, where only the $1s$ orbit contributes at $r=0$). The HO density is too large in the centre and has a long Gaussian tail, whereas the square-well density is cut off sharply at $r=R_{\rm sw}$. Neither reproduces the experimentally observed nuclear density --- approximately constant in the interior (saturation) with a diffuse surface of thickness $\approx2$--$2.5$~fm --- which motivates the Woods--Saxon potential discussed below.
+All densities oscillate in the interior, reflecting the shell structure (e.g.\ the central dip for $A_f=8$, where only the $1s$ orbit contributes at $r=0$). The HO density is too large in the centre and has a long Gaussian tail, whereas the square-well density is cut off sharply at $r=R_{\rm sw}$. Neither reproduces the experimentally observed nuclear density, which is approximately constant in the interior (saturation) and has a diffuse surface of thickness $\approx2$--$2.5$~fm. The Woods--Saxon density, obtained without any adjustment, lies between the two limits: its interior is flatter and its surface falls off smoothly. Its rms radius comes out close to the empirical value (e.g.\ $2.6$~fm for $A_f=8$, compared with the measured point-proton rms radius of $^{16}$O, $\approx2.6$~fm). This is why the Woods--Saxon shape, discussed below, is used as a realistic phenomenological mean field.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{density_profiles.png}
-    \caption{Density profiles of $A_f$ spin-$\frac12$ fermions in the harmonic oscillator (blue) and the infinite square well (red), with $\hbar\omega$ and $R_{\rm sw}$ fixed by $\braket{r^2}=\frac35R^2$, $R=1.2\,(2A_f)^{1/3}$~fm. Orbits are filled in the spin-orbit order ($1s_{1/2}$, $1p_{3/2}$, $1p_{1/2}$, $1d_{5/2}$, \dots). The dashed line is the equivalent sharp radius $R_{\rm eq}=\sqrt{5\braket{r^2}_{\rm HO}/3}$.}
+    \caption{Density profiles of $A_f$ spin-$\frac12$ fermions in the harmonic oscillator (blue), the Woods--Saxon potential (green; $V_0=50$~MeV, $R_{\rm WS}=1.27\,(2A_f)^{1/3}$~fm, $a=0.67$~fm) and the infinite square well (red). For the HO and the square well, $\hbar\omega$ and $R_{\rm sw}$ are fixed by $\braket{r^2}=\frac35R^2$, $R=1.2\,(2A_f)^{1/3}$~fm. Orbits are filled in the spin-orbit order ($1s_{1/2}$, $1p_{3/2}$, $1p_{1/2}$, $1d_{5/2}$, \dots). The dashed line is the equivalent sharp radius $R_{\rm eq}=\sqrt{5\braket{r^2}_{\rm HO}/3}$.}
     \label{fig:density}
 \end{figure}
 
@@ -368,6 +368,16 @@ U(r)=-\frac{V_0}{1+e^{(r-R)/a}}
 \end{tikzpicture}
 \end{center}
 The Woods--Saxon potential alone cannot reproduce the observed shells either.
+
+%--- single-particle spectra plot ---
+This is illustrated in Fig.~\ref{fig:spspectra}, which compares the single-particle spectra (without spin-orbit term) of the harmonic oscillator, of a Woods--Saxon potential with typical parameters of a heavy nucleus ($V_0=50$~MeV, $R=1.27\,A^{1/3}$~fm, $a=0.67$~fm, $A=208$), and of the infinite square well. To make the spectra comparable, each of them is shifted so that $E_{1s}=0$ and scaled by a single factor fitted to the HO shell energies. Going from the HO to the square well, the degeneracy of the HO major shells is lifted and in each shell the state with the largest $\ell$ ($1d$, $1f$, $1g$, $1h$, $1i$) is lowered most: these states are localized at large $r$ (cf.\ Fig.~\ref{fig:radial}), where the flat-bottomed potentials are deeper than the HO. The magic numbers $2,8,20$ appear for all three potentials, but none of them reproduces the observed magic numbers $28,50,82,126$ --- the gaps appear at $34,40,58,92,138$ instead. An additional ingredient is needed: the spin-orbit interaction.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{sp_spectra.png}
+    \caption{Single-particle spectra without spin-orbit term: harmonic oscillator (left), Woods--Saxon potential with $V_0=50$~MeV, $R=7.52$~fm, $a=0.67$~fm (middle), and infinite square well (right). Each spectrum is shifted so that $E_{1s}=0$ and scaled to the HO shell energies (units of $\hbar\omega$). Numbers in brackets are the degeneracies $2(2\ell+1)$ (HO: of the whole shell); boxed numbers give the total number of particles below gaps larger than $0.38\,\hbar\omega$. Dashed lines connect the same $n\ell$ states.}
+    \label{fig:spspectra}
+\end{figure}
 
 \subsection{Spin-orbit interaction}
 We add a spin-orbit term
