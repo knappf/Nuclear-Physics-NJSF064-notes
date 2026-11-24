@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.4)  24 NOV 2026 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.4)  24 NOV 2026 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,7 +807,7 @@ m/it/10.95 `\OT1/cmr/m/n/10.95 0[]\OML/cmm/m/it/10.95 L[]\OT1/cmr/m/n/10.95 0[]
  []
 
 [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
-Overfull \hbox (5.47914pt too wide) detected at line 2021
+Overfull \hbox (5.47914pt too wide) detected at line 2052
 []\OML/cmm/m/it/10.95 [] \OMS/cmsy/m/n/10.95 ^^B \OML/cmm/m/it/10.95 [][][] \
 OT1/cmr/m/n/10.95 = [] []2\OML/cmm/m/it/10.95 ^^V \OT1/cmr/m/n/10.95 2 [][]00[]
 \OML/cmm/m/it/10.95 [][] \OT1/cmr/m/n/10.95 = [](\OMS/cmsy/m/n/10.95 ^^@\OT1/
@@ -816,8 +816,8 @@ cmr/m/n/10.95 1)[][] \OML/cmm/m/it/10.95 [][] \OT1/cmr/m/n/10.95 = [] [] \OML
 /m/it/10.95 []\OMS/cmsy/m/n/10.95 j[]
  []
 
-
-Overfull \hbox (2.35889pt too wide) detected at line 2038
+[39]
+Overfull \hbox (2.35889pt too wide) detected at line 2069
 \OT1/cmr/m/n/10.95 = [][]\OML/cmm/m/it/10.95 [] [] []\OT1/cmr/m/n/10.95 2\OML/
 cmm/m/it/10.95 ^^W \OT1/cmr/m/n/10.95 2 [][]20[]\OML/cmm/m/it/10.95 [][] \OT1
 /cmr/m/n/10.95 + \OML/cmm/m/it/10.95 [] [] []\OT1/cmr/m/n/10.95 2\OML/cmm/m/it
@@ -827,15 +827,15 @@ cmm/m/it/10.95 ^^W \OT1/cmr/m/n/10.95 2 [][]20[]\OML/cmm/m/it/10.95 [][] \OT1
 0.95 ^^W[][]\OT1/cmr/m/n/10.95 2 [][]\OML/cmm/m/it/10.95 [][][]
  []
 
-[39] [40] [41] [42]
-Overfull \hbox (0.35808pt too wide) detected at line 2286
+[40] [41] [42] [43]
+Overfull \hbox (0.35808pt too wide) detected at line 2317
 [][]\OML/cmm/m/it/10.95 ; [][] \OT1/cmr/m/n/10.95 = [](\OMS/cmsy/m/n/10.95 ^^@\
 OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 )[] [] +\OML/cmm/m/it/10.95 i[][] [] \OT
 1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^N[]^^N[]
  []
 
-[43] [44] [45]
-Overfull \hbox (4.01561pt too wide) detected at line 2394
+[44] [45]
+Overfull \hbox (4.01561pt too wide) detected at line 2425
 \OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 E\OT1/cmr/m/n/10.9
 5 2\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/
 m/n/10.95 0[]) = \OML/cmm/m/it/10.95 ^^Z[]R[] [] \OT1/cmr/m/n/10.95 = [][]\OML/
@@ -843,14 +843,14 @@ cmm/m/it/10.95 R[][][][];  ^^Z \OT1/cmr/m/n/10.95 = [] = []\OML/cmm/m/it/10.95
 ;  ![] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 :
  []
 
-[46]
-Overfull \hbox (2.91022pt too wide) in paragraph at lines 2485--2486
+[46] [47]
+Overfull \hbox (2.91022pt too wide) in paragraph at lines 2516--2517
 []\T1/cmr/m/n/10.95 The rigid-body value for a quadrupole-deformed nu-cleus is 
 ap-prox-i-mately $\OMS/cmsy/m/n/10.95 J[] ^^Y []\OML/cmm/m/it/10.95 AmR[]\OT1/c
 mr/m/n/10.95 (1 +
  []
 
-[47] [48] [49] [50] [51] [52] (./NJSF064_block2_expanded.aux)
+[48] [49] [50] [51] [52] (./NJSF064_block2_expanded.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -860,8 +860,8 @@ Package rerunfilecheck Info: File `NJSF064_block2_expanded.out' has not changed
 (rerunfilecheck)             Checksum: 8AF5B9A619041A7AD596C2C2DB0D3A9E;6429.
  ) 
 Here is how much of TeX's memory you used:
- 25306 strings out of 474222
- 479662 string characters out of 5748734
+ 25307 strings out of 474222
+ 479673 string characters out of 5748734
  1971975 words of memory out of 5000000
  47068 multiletter control sequences out of 15000+600000
  578542 words of font info for 93 fonts, out of 8000000 for 9000
@@ -894,10 +894,10 @@ rm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
 m1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on NJSF064_block2_expanded.pdf (52 pages, 2660706 bytes).
+Output written on NJSF064_block2_expanded.pdf (52 pages, 2663545 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 446 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

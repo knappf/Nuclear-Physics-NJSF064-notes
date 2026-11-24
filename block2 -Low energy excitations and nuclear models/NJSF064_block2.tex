@@ -1235,6 +1235,37 @@ $L$ & $g$ shell, $\ell=4$ & $h$ shell, $\ell=5$\\ \hline
 \end{center}
 The $L=0$ state is strongly favoured (lowered), the other states are shifted much less. The $\delta$ interaction is a simple effective force describing \textbf{pairing} in nuclei.
 
+\paragraph{Including spin: two identical nucleons in the same orbit $j$.}
+The same calculation can be repeated for two identical nucleons in the orbit $\ket{n\ell jm}$ coupled to $\ket{j^2;JM}$ (antisymmetric, so that only even $J=0,2,\dots,2j-1$ are allowed, see above). Only the spin-singlet ($S=0$) part of the wave function contributes, since for identical nucleons the $S=1$ part is spatially antisymmetric and vanishes at $\vec r_1=\vec r_2$. The result is (A.~de-Shalit, I.~Talmi, \emph{Nuclear Shell Theory}, 1963)
+\[
+\boxed{\Delta E(j^2,J)=\frac{(2j+1)^2}{2}\,F_0\begin{pmatrix}j&j&J\\\frac12&-\frac12&0\end{pmatrix}^2},\qquad J\ \text{even},
+\]
+with the same radial integral $F_0<0$ as above. For $J=0$ the 3$j$ symbol is $\begin{pmatrix}j&j&0\\\frac12&-\frac12&0\end{pmatrix}^2=\frac{1}{2j+1}$, hence
+\[
+\Delta E(j^2,J{=}0)=\frac{2j+1}{2}\,F_0=-G\,\Omega,\qquad \Omega=j+\tfrac12,\qquad G=-F_0=\frac{V_0}{4\pi}\int_0^\infty r^2\big(R_{n\ell}(r)\big)^4\ud r>0 .
+\]
+This is the \textbf{pairing energy}: the $J=0$ pair is lowered by $G\Omega$, i.e.\ proportionally to the number $\Omega$ of pairs $(m,-m)$ available in the orbit, while the $J>0$ states stay close to the unperturbed energy. Values of $\Delta E(j^2,J)/F_0$:
+\begin{center}
+\begin{tabular}{c c c c c}
+$J$ & $j=\frac52$ & $j=\frac72$ & $j=\frac92$ & $j=\frac{11}{2}$\\ \hline
+0 & 3.000 & 4.000 & 5.000 & 6.000\\
+2 & 0.686 & 0.952 & 1.212 & 1.469\\
+4 & 0.286 & 0.468 & 0.629 & 0.783\\
+6 & --- & 0.233 & 0.373 & 0.494\\
+8 & --- & --- & 0.202 & 0.318\\
+10 & --- & --- & --- & 0.180
+\end{tabular}
+\end{center}
+Example: ${}^{210}$Po $={}^{208}$Pb $+\,2p$ in $1h_{9/2}$. Fixing $|F_0|=0.31$~MeV to the energy of the $2^+_1$ state, the $\delta$ force gives the $(1h_{9/2})^2$ multiplet
+\begin{center}
+\begin{tabular}{c c c c c c}
+$J^\pi$ & $0^+$ & $2^+$ & $4^+$ & $6^+$ & $8^+$\\ \hline
+$E_x$ ($\delta$ force) [MeV] & 0 & 1.18 & 1.36 & 1.44 & 1.50\\
+$E_x$ (exp.) [MeV] & 0 & 1.18 & 1.43 & 1.47 & 1.56
+\end{tabular}
+\end{center}
+i.e.\ a large gap between the $0^+$ ground state and the compressed $2^+,4^+,6^+,8^+$ states, in agreement with the experimental spectrum; the pairing energy of the ground state is $G\Omega\approx1.6$~MeV.
+
 \subsection{Pairing}
 There are many experimental observables indicating that pairing of nucleons with opposite spins occurs in nuclei:
 \begin{itemize}
