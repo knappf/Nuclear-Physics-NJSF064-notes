@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795464934.35157 "NJSF064_block2_expanded.tex" "NJSF064_block2_expanded.pdf" "NJSF064_block2_expanded" 1795464954.27659 0
+["pdflatex"] 1795551382.32057 "NJSF064_block2_expanded.tex" "NJSF064_block2_expanded.pdf" "NJSF064_block2_expanded" 1795551403.58829 0
   "/etc/texmf/web2c/texmf.cnf" 1756997797.69912 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -205,13 +205,16 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1756998533.77461 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1756998579 8214474 c258e9409c82f9998d352d6cdb6a9883 ""
-  "NJSF064_block2_expanded.aux" 1795464953.64613 11566 d4e2adb19f3995a08d05d2f959ce4f80 "pdflatex"
-  "NJSF064_block2_expanded.out" 1795464953.64613 8314 0c94b015c59c1cee4229a6b402e134bf "pdflatex"
-  "NJSF064_block2_expanded.tex" 1795464915.45489 145534 ae690f38b34da9a35191de3d4be35157 ""
+  "NJSF064_block2_expanded.aux" 1795551402.84887 16587 e7554268c91baeb011cf32f896797657 "pdflatex"
+  "NJSF064_block2_expanded.out" 1795551402.85287 6429 8af5b9a619041a7ad596c2c2db0d3a9e "pdflatex"
+  "NJSF064_block2_expanded.tex" 1795551381.00856 160668 37e555069003c26033edc54c774880d1 ""
   "density_profiles.png" 1795463914.37469 239619 f9ad6ea5dafae72b2752748a0c3aa072 ""
   "e2plus.png" 1795104206.04985 233512 7a5d33031a52c105de4d063c6c0aed3e ""
+  "oxygen_usd.png" 1795550485.94594 153002 56b7c198a23175c4f3cb2848975ad3de ""
   "radial_wf.png" 1795462111.43465 345339 b1f91fbd3288e50e961c29e9d5694cb7 ""
   "s2n_s2p.png" 1795104206.04185 584326 5bf7232d4d5af947ecddeedc2b40db68 ""
+  "schmidt_lines.png" 1795527946.8059 114346 3bb7a707eb468e3ebb0844004937e615 ""
+  "sp_evolution_A.png" 1795532953.72678 796827 77c62d4bda29f97c11001adc2247cb55 ""
   "sp_spectra.png" 1795423319.62373 198132 466b7faffed72b2fd6dd5dbf78197f02 ""
   (generated)
   "NJSF064_block2_expanded.aux"

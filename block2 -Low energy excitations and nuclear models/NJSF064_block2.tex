@@ -403,6 +403,21 @@ This is illustrated in Fig.~\ref{fig:spspectra}, which compares the single-parti
     \label{fig:spspectra}
 \end{figure}
 
+%--- single-particle evolution with A ---
+\paragraph{Evolution with the mass number.} How the single-particle spectrum changes from light to heavy nuclei is shown in Fig.~\ref{fig:spevolA}. The neutron and proton levels are computed for nuclei on the $\beta$-stability line, $A=4$--$270$, with a realistic Woods--Saxon potential. The potential already includes the Coulomb term for protons and the spin-orbit term discussed in the next subsection (``Seminole'' parametrization, M.~Schwierz, I.~Wiedenh\"over, A.~Volya, arXiv:0709.3525). Several features are general:
+\begin{itemize}
+\item As $A$ grows, the well becomes wider and all levels go down, roughly as $A^{-2/3}$ (cf.\ the square well, $E\propto1/R^2$). New orbits with ever higher $\ell$ become bound at $\varepsilon=0$.
+\item The Fermi energy stays roughly constant at $\varepsilon_F\approx-8$~MeV (the typical nucleon separation energy). It jumps up at the magic numbers, where a shell is completed and the next nucleon has to go across the gap.
+\item The proton levels lie higher than the neutron levels because of the Coulomb repulsion, and in heavy nuclei the neutron excess makes the proton well deeper and the neutron well shallower (isospin term). For protons the two effects compete: the deep levels turn upwards for heavy nuclei, but $\varepsilon_F$ of protons and neutrons remains similar.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{sp_evolution_A.png}
+    \caption{Neutron (left) and proton (right) single-particle levels of the Woods--Saxon potential with spin-orbit and Coulomb terms (Seminole parameters) for nuclei on the $\beta$-stability line, as a function of $A$ (top axis: $N$ or $Z$). Colours label $\ell$; solid lines $j=\ell+\frac12$, dashed $j=\ell-\frac12$. Thick segments are occupied orbits, the dotted line is the last occupied level $\varepsilon_F$, and boxes mark the shell closures. Calculated with the course code \texttt{woods\_saxon\_shells.py}.}
+    \label{fig:spevolA}
+\end{figure}
+
 \subsection{Spin-orbit interaction}
 We add a spin-orbit term
 \[
@@ -559,7 +574,7 @@ S^A_{n(p)}=-\varepsilon^i_{n(p)}-E^{A-1}_i ,
   \begin{scope}
     \spwell \spcore \splev{-1.85}{core,core,core,hole}
     \spempty{-1.1} \spempty{-0.6}
-    \node[font=\scriptsize,right] at ({xw(-1.85)},-1.85) {$\varepsilon_F$};
+    \node[font=\scriptsize,right] at ({xw(-1.85)},-1.85) {$\varepsilon_F\!=\!\varepsilon_0$};
     \node[font=\scriptsize,right] at ({xw(-2.3)},-2.3) {$\varepsilon_1$};
     \draw[<->,thick] (0.48,-1.73) -- (0.48,0) node[pos=0.62,right,font=\scriptsize,fill=blue!7,inner sep=1pt] {$S^{A}_{n(p)}$};
     \node[font=\small,align=center] at (0,-3.5) {hole in $\varepsilon_F$\\[-1pt] {\footnotesize ground state of $A-1$}};
@@ -570,15 +585,14 @@ S^A_{n(p)}=-\varepsilon^i_{n(p)}-E^{A-1}_i ,
     \node[font=\small,align=center] at (0,-3.5) {hole in $\varepsilon_1$\\[-1pt] {\footnotesize excited state of $A-1$}};
   \end{scope}
   \begin{scope}[xshift=7.6cm]
-    \fill[gray!12] (0,0) rectangle (1.6,0.45);
-    \draw[gray] (0,0) -- (1.6,0) node[right,black,font=\footnotesize] {threshold $A$};
-    \draw[ultra thick,red!75!black] (0,-1.85) -- (1.6,-1.85) node[right,black,font=\footnotesize] {$E_0^{A-1}$ (g.s.)};
-    \draw[ultra thick,red!75!black] (0,-2.3) -- (1.6,-2.3) node[right,black,font=\footnotesize] {$E_1^{A-1}$};
-    \draw[<->] (0.45,-1.85) -- (0.45,0) node[midway,left,font=\scriptsize] {$S$};
-    \draw[<->] (1.1,-2.3) -- (1.1,-1.85) node[midway,right,font=\scriptsize] {$E_x$};
-    \node[font=\small,align=center] at (0.8,-3.5) {nucleus $A-1$\\[-1pt] {\footnotesize at $\varepsilon_i=-S^{A}_{n(p)}-E_i^{A-1}$}};
+    \draw[->] (-0.25,-3.0) -- (-0.25,0.75) node[above] {$E$};
+    \draw[very thick] (0,-2.75) -- (1.6,-2.75) node[right,font=\footnotesize] {$A$ (g.s.)};
+    \draw[ultra thick,red!75!black] (0,-1.0) -- (1.6,-1.0) node[right,black,font=\footnotesize] {$E_0^{A-1}$ (g.s.): hole in $\varepsilon_0$};
+    \draw[ultra thick,red!75!black] (0,-0.2) -- (1.6,-0.2) node[right,black,font=\footnotesize] {$E_1^{A-1}$: hole in $\varepsilon_1$};
+    \draw[<->] (0.45,-2.75) -- (0.45,-1.0) node[midway,right,font=\scriptsize] {$S^{A}_{n(p)}$};
+    \draw[<->] (1.1,-1.0) -- (1.1,-0.2) node[midway,right,font=\scriptsize] {$E_x$};
+    \node[font=\small,align=center] at (0.8,-3.5) {nucleus $A-1$\\[-1pt] {\footnotesize $\varepsilon_i=-S^{A}_{n(p)}-E_i^{A-1}$}};
   \end{scope}
-  \foreach \e in {-1.85,-2.3} \draw[densely dotted,gray] ({4.3+xw(\e)},\e) -- (7.6,\e);
 \end{tikzpicture}
 \end{center}
 \[
@@ -704,6 +718,19 @@ Examples:
 \item ${}^{207}$Pb: neutron hole in $3p_{1/2}$ $\to$ $\frac12^-$, $j=\ell-\frac12$.
 \end{itemize}
 The magnetic moment for a hole configuration is given by the corresponding single-particle state.
+
+Fig.~\ref{fig:schmidt} compares the Schmidt lines with the measured ground-state magnetic moments of nuclei that have one nucleon more (particle) or one nucleon less (hole) than a doubly magic core (${}^{16}$O, ${}^{40}$Ca, ${}^{48}$Ca, ${}^{56}$Ni, ${}^{132}$Sn, ${}^{208}$Pb). The orbit $n\ell j$ follows from the measured $I^\pi$; e.g.\ ${}^{39}$K ($\frac32^+$) is a proton hole in $1d_{3/2}$ ($\ell=2$, $j=\ell-\frac12$), and ${}^{57}$Cu ($\frac32^-$) is a proton in $2p_{3/2}$ ($\ell=1$, $j=\ell+\frac12$). We can see that:
+\begin{itemize}
+\item the light nuclei ${}^{15}$N, ${}^{17}$F, ${}^{15}$O, ${}^{17}$O, ${}^{39}$Ca and the heavy ${}^{207}$Pb are within $\approx0.1$--$0.15\,\mu_N$ of the Schmidt values, i.e.\ they are good single-particle (single-hole) states;
+\item larger deviations appear e.g.\ for ${}^{209}$Bi ($4.11\,\mu_N$ vs.\ $2.62\,\mu_N$), ${}^{207}$Tl ($1.88$ vs.\ $2.79$), ${}^{57}$Cu ($2.58$ vs.\ $3.79$) or ${}^{57}$Ni ($-0.80$ vs.\ $-1.91$);
+\item the measured values are (almost) always shifted from the Schmidt line towards the other line, i.e.\ the spin contribution is reduced; the dashed lines show the result with $g_s^{\rm eff}=0.7\,g_s$ (see below).
+\end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{schmidt_lines.png}
+    \caption{Schmidt lines $\mu(j)=j\big[g_\ell\pm(g_s-g_\ell)/(2\ell+1)\big]$ for $j=\ell+\frac12$ (blue) and $j=\ell-\frac12$ (red), for odd-proton (left) and odd-neutron (right) nuclei. The dashed lines use a quenched spin $g$-factor $g_s^{\rm eff}=0.7\,g_s$. Symbols: measured ground-state magnetic moments of doubly magic $\pm1$ nucleon nuclei; full symbols = particle (magic $+1$), open symbols = hole (magic $-1$), the colour indicating $j=\ell\pm\frac12$ of the occupied orbit. Data: N.~J.~Stone, At.\ Data Nucl.\ Data Tables \textbf{90} (2005) 75; IAEA report INDC(NDS)-0658 (2014).}
+    \label{fig:schmidt}
+\end{figure}
 
 The observed magnetic moments lie within the bands given by the Schmidt estimates, or at least not far from them; nuclei magic $\pm1$ nucleon are closer to the Schmidt estimates. The agreement improves using an effective spin $g$-factor
 \[
@@ -840,6 +867,55 @@ Shell-model description of 2 (identical) particles $+$ core:
 \op H_V=\underbrace{\op h_0(1)+\op h_0(2)}_{\text{one-body}}+\underbrace{\op V(1,2)}_{\text{two-body}},
 \]
 where we neglect the interaction $\op V_{CV}$ between the core and the valence space.
+The single-particle orbits are divided into three groups: the orbits of the \emph{inert core} are fully occupied and never excited, the \emph{valence space} contains the orbits available to the valence particles, and the orbits above it are always empty (excluded space), see Fig.~\ref{fig:valspace}.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.9]
+  % bands
+  \fill[black!4]  (-0.2,-4.0) rectangle (3.4,-1.6);
+  \draw[black!65,thick,rounded corners=4pt] (-0.2,-4.0) rectangle (3.4,-1.6);
+  \node[font=\scriptsize,black!65,fill=white,inner sep=1.5pt] at (1.6,-1.6) {inert core};
+  \fill[blue!7] (-0.2,-1.1) rectangle (3.4,1.0);
+  \fill[gray!10] (-0.2,1.4) rectangle (3.4,2.9);
+  % core orbits (fully occupied)
+  \foreach \y/\lab/\d in {-3.6/1s_{1/2}/2, -2.4/1p_{3/2}/4, -2.0/1p_{1/2}/2} {
+    \draw[very thick,black!60] (0,\y) -- (3.2,\y);
+    \node[left,font=\footnotesize] at (-0.2,\y) {$\lab$};
+    \foreach \k in {1,...,\d} {
+      \node[core] at ({0.85+0.3*(\k-(\d+1)/2)},\y) {};
+      \node[val]  at ({2.35+0.3*(\k-(\d+1)/2)},\y) {};
+    }
+  }
+  \node[font=\scriptsize,red!75!black] at (0.85,-3.25) {protons};
+  \node[font=\scriptsize,blue!70!black] at (2.35,-3.25) {neutrons};
+  % valence orbits
+  \foreach \y/\lab in {-0.7/1d_{5/2}, -0.1/2s_{1/2}, 0.6/1d_{3/2}} {
+    \draw[thick,blue!70!black,densely dashed] (0,\y) -- (3.2,\y);
+    \node[left,font=\footnotesize] at (-0.2,\y) {$\lab$};
+  }
+  \node[val] (p1) at (1.15,-0.7) {};
+  \node[val] (p2) at (2.05,-0.1) {};
+  \draw[decorate,decoration={snake,amplitude=1.2pt,segment length=4pt},thick,blue!50!black] (p1) -- (p2);
+  \node[font=\scriptsize,blue!50!black,left] at (1.55,-0.33) {$V(1,2)$};
+  \node[font=\scriptsize,below] at (p1.south) {$j_1$};
+  \node[font=\scriptsize,above] at (p2.north) {$j_2$};
+  % excluded orbits
+  \foreach \y/\lab in {1.8/1f_{7/2}, 2.4/2p_{3/2}} {
+    \draw[gray,densely dotted,thick] (0,\y) -- (3.2,\y);
+    \node[left,font=\footnotesize,gray] at (-0.2,\y) {$\lab$};
+  }
+  % braces
+  \draw[decorate,decoration={brace,amplitude=5pt}] (3.6,2.9) -- (3.6,1.4)
+     node[midway,right=7pt,align=left,font=\small] {excluded space\\[-1pt]{\footnotesize (always empty)}};
+  \draw[decorate,decoration={brace,amplitude=5pt}] (3.6,1.0) -- (3.6,-1.1)
+     node[midway,right=7pt,align=left,font=\small] {valence space\\[-1pt]{\footnotesize 2 particles, $\op H_V=\op h_0(1)+\op h_0(2)+\op V(1,2)$}};
+  \draw[decorate,decoration={brace,amplitude=5pt}] (3.6,-1.6) -- (3.6,-4.0)
+     node[midway,right=7pt,align=left,font=\small] {inert core, energy $E_C$\\[-1pt]{\footnotesize (all orbits filled, $I^\pi=0^+$)}};
+  \node[font=\footnotesize,align=center] at (1.6,-4.45) {e.g.\ ${}^{18}$O $=$ ${}^{16}$O $+\,2n$};
+\end{tikzpicture}
+\caption{Shell model with two valence particles. The core orbits are fully occupied (inert core with energy $E_C$; red: protons, blue: neutrons), the two valence particles (here neutrons) occupy orbits $j_1$, $j_2$ of the valence space and interact via the residual interaction $V(1,2)$; the orbits above the valence space are excluded.}
+\label{fig:valspace}
+\end{figure}
 Without interaction we have the unperturbed energy
 \[
 \op h\ket{n\ell jm}=\varepsilon\ket{n\ell jm},\qquad \op h=\frac{\op{\vec p}^{\,2}}{2m}+\op U,
@@ -921,18 +997,45 @@ For $j_1=j_2\equiv j$
 \subsection{Shell model for 2 valence particles in the \texorpdfstring{$sd$}{sd} shell}
 The model space: the $sd$ shell ($1d_{5/2}$, $2s_{1/2}$, $1d_{3/2}$) is the valence model space, the $1s_{1/2}$, $1p_{3/2}$, $1p_{1/2}$ orbits of protons and neutrons form the core.
 \begin{center}
-\begin{tikzpicture}[scale=0.8]
-\draw (0,0) rectangle (2,1); \node[below] at (1,-0.1) {$p$};
-\foreach \x in {0.2,0.6,1.0} \draw (\x,0) -- (\x+0.8,1);
-\draw (4,0) rectangle (6,1); \node[below] at (5,-0.1) {$n$};
-\foreach \x in {4.2,4.6,5,5.4} \draw (\x,0) -- (\x+0.6,1);
-\foreach \x in {4.2,4.6,5,5.4} \draw (\x+0.6,0) -- (\x,1);
-\draw (4,2.0) -- (6,2.0) node[right]{\small $1d_{5/2}$};
-\draw (4,2.5) -- (6,2.5) node[right]{\small $2s_{1/2}$};
-\draw (4,3.0) -- (6,3.0) node[right]{\small $1d_{3/2}$};
-\fill (4.7,2.08) circle (3pt); \fill (5.3,2.58) circle (3pt);
-\node[right] at (7.5,2.5) {$\Big\}$ $sd$-shell, valence model space};
-\node[right] at (7.5,0.5) {$\Big\}$ core ($1s_{1/2},1p_{3/2},1p_{1/2}$)};
+\begin{tikzpicture}[scale=0.9,
+    declare function={hw(\y,\t)=1.35+0.12*ln(5.4/(\t-\y)-1);},
+    pnuc/.style={circle,fill=red!75!black,draw=white,line width=0.5pt,inner sep=0pt,minimum size=7pt},
+    nnuc/.style={circle,fill=blue!70!black,draw=white,line width=0.5pt,inner sep=0pt,minimum size=7pt}]
+  \foreach \cx/\s/\col/\nuc/\t/\b in {1.2/0.3/red!75!black/pnuc/protons/{Z=8}, 5.3/0/blue!70!black/nnuc/neutrons/{N=10}} {
+    \pgfmathsetmacro{\top}{1.3+\s}
+    % schematic Woods--Saxon well
+    \fill[\col!6!white,domain=-1.8:1.8,samples=80,variable=\x]
+       plot ({\cx+\x},{\top-5.4/(1+exp((abs(\x)-1.35)/0.12))}) -- cycle;
+    \draw[\col,thick,domain=-1.8:1.8,samples=80,variable=\x]
+       plot ({\cx+\x},{\top-5.4/(1+exp((abs(\x)-1.35)/0.12))});
+    \draw[gray] (\cx-1.8,\top) -- (\cx+1.8,\top);
+    \node[font=\small] at (\cx,\top+0.35) {\t};
+    \node[font=\footnotesize] at (\cx,-4.65) {$\b$};
+    % core orbits (filled)
+    \foreach \y/\d in {-3.6/2, -2.4/4, -2.0/2} {
+      \pgfmathsetmacro{\yy}{\y+\s}\pgfmathsetmacro{\w}{hw(\yy,\top)-0.05}
+      \draw[very thick,\col] (\cx-\w,\yy) -- (\cx+\w,\yy);
+      \foreach \k in {1,...,\d} \node[\nuc] at ({\cx+0.3*(\k-(\d+1)/2)},\yy) {};
+    }
+    % sd valence orbits (empty)
+    \foreach \y in {-0.7,-0.1,0.6} {
+      \pgfmathsetmacro{\yy}{\y+\s}\pgfmathsetmacro{\w}{hw(\yy,\top)-0.05}
+      \draw[thick,\col,densely dashed] (\cx-\w,\yy) -- (\cx+\w,\yy);
+    }
+  }
+  % border around the inert core
+  \draw[black!65,thick,rounded corners=4pt] (-0.25,-4.3) rectangle (6.95,-1.45);
+  \node[font=\scriptsize,black!65,fill=white,inner sep=1.5pt] at (3.25,-1.45) {inert core};
+  \node[font=\scriptsize,gray,align=center] at (1.2,2.45) {(shifted up by Coulomb)};
+  \foreach \y/\lab in {-3.6/1s_{1/2}, -2.4/1p_{3/2}, -2.0/1p_{1/2}, -0.7/1d_{5/2}, -0.1/2s_{1/2}, 0.6/1d_{3/2}}
+    \node[left,font=\footnotesize] at (-0.65,\y+0.3) {$\lab$};
+  \node[nnuc] at (4.9,-0.7) {};
+  \node[nnuc] at (5.7,-0.1) {};
+  \draw[decorate,decoration={brace,amplitude=5pt}] (7.3,0.9) -- (7.3,-1.0)
+     node[midway,right=7pt,align=left,font=\small] {$sd$ shell:\\[-1pt]valence model space};
+  \draw[decorate,decoration={brace,amplitude=5pt}] (7.3,-1.45) -- (7.3,-4.3)
+     node[midway,right=7pt,align=left,font=\small] {core ${}^{16}$O\\[-1pt]{\footnotesize ($1s_{1/2},1p_{3/2},1p_{1/2}$ filled)}};
+  \node[font=\footnotesize] at (3.25,-5.15) {e.g.\ ${}^{18}$O: 2 valence neutrons};
 \end{tikzpicture}
 \end{center}
 Two-particle basis: $\ket{(n_1\ell_1)j_1\,(n_2\ell_2)j_2;JM}$.
@@ -976,6 +1079,82 @@ How to determine $\op V$ --- the effective interaction?
 \item or calculation of the effective interaction from a realistic bare $NN$ force.
 \end{itemize}
 One can construct more complicated configurations $\to$ $n$ valence particles. If $V$ is 2-body, \emph{the matrix elements of $n$-particle configurations can be expressed as linear combinations of 2-body matrix elements.} The dimension of the space grows drastically $\Rightarrow$ large-scale diagonalisation.
+
+%--- 18O with the USD interaction ---
+\paragraph{Example: ${}^{18}$O with the USD interaction.}
+A widely used empirical effective interaction for the $sd$ shell is the USD (``universal $sd$'') interaction of Wildenthal (B.~H.~Wildenthal, Prog.\ Part.\ Nucl.\ Phys.\ \textbf{11}, 5 (1984); see also B.~A.~Brown, B.~H.~Wildenthal, Annu.\ Rev.\ Nucl.\ Part.\ Sci.\ \textbf{38}, 29 (1988)). It consists of 3 single-particle energies and 63 two-body matrix elements $\braket{ab;JT|\op V|cd;JT}$, treated as free parameters and fitted to 447 measured energy levels of $sd$-shell nuclei with $A=17$--$39$ (rms deviation about 150~keV). The two-body matrix elements are scaled with the mass number as $(18/A)^{0.3}$. The single-particle energies are
+\[
+\varepsilon_{1d_{5/2}}=-3.95~\text{MeV},\qquad
+\varepsilon_{2s_{1/2}}=-3.16~\text{MeV},\qquad
+\varepsilon_{1d_{3/2}}=+1.65~\text{MeV},
+\]
+close to the measured $5/2^+$, $1/2^+$ and $3/2^+$ states of ${}^{17}$O relative to ${}^{16}$O$+n$ ($-4.14$, $-3.27$ and $+0.94$~MeV).
+
+For ${}^{18}$O (two valence neutrons, $T=1$) the $0^+$ matrix above becomes, in MeV and in the basis $\ket{(1d_{5/2})^2}$, $\ket{(1d_{3/2})^2}$, $\ket{(2s_{1/2})^2}$,
+\[
+H(0^+)=
+\begin{pmatrix}
+-10.72 & -3.19 & -1.33\\
+-3.19 & 1.11 & -1.08\\
+-1.33 & -1.08 & -8.45
+\end{pmatrix},
+\qquad E_{0^+_1}=-12.17~\text{MeV},
+\]
+with $|c_1|^2=0.79$, $|c_2|^2=0.06$, $|c_3|^2=0.15$. The residual interaction lowers the ground state by more than 4~MeV with respect to the unperturbed $2\varepsilon_{1d_{5/2}}=-7.90$~MeV (pairing), and the energy relative to ${}^{16}$O$+2n$ agrees with the measured value $B({}^{16}\mathrm{O})-B({}^{18}\mathrm{O})=-12.19$~MeV (AME2020 masses).
+
+The other $J^\pi$ blocks are constructed in the same way. The USD matrices for ${}^{18}$O are (in MeV; the signs of the off-diagonal elements depend on the phase convention of the two-particle states):
+
+$J^\pi=1^+$, basis $\ket{(1d_{3/2})(2s_{1/2})}$, $\ket{(1d_{5/2})(1d_{3/2})}$,
+\[
+H(1^+)=
+\begin{pmatrix}
+-0.91 & 0.19\\
+0.19 & -1.27
+\end{pmatrix},
+\qquad E=-1.35,\ -0.83;
+\]
+$J^\pi=2^+$, basis $\ket{(1d_{5/2})^2}$, $\ket{(1d_{3/2})^2}$, $\ket{(1d_{5/2})(1d_{3/2})}$, $\ket{(1d_{5/2})(2s_{1/2})}$, $\ket{(1d_{3/2})(2s_{1/2})}$,
+\[
+H(2^+)=
+\begin{pmatrix}
+-8.90 & -1.62 & -0.28 & -0.86 & 0.62\\
+-1.62 & 3.23 & -0.61 & -0.40 & 0.52\\
+-0.28 & -0.61 & -2.63 & -0.48 & 0.52\\
+-0.86 & -0.40 & -0.48 & -7.93 & 1.94\\
+0.62 & 0.52 & 0.52 & 1.94 & -1.92
+\end{pmatrix},
+\]
+\[
+E=-9.99,\ -7.73,\ -2.71,\ -1.24,\ 3.52;
+\]
+$J^\pi=3^+$, basis $\ket{(1d_{5/2})(2s_{1/2})}$, $\ket{(1d_{5/2})(1d_{3/2})}$,
+\[
+H(3^+)=
+\begin{pmatrix}
+-6.35 & -0.67\\
+-0.67 & -1.71
+\end{pmatrix},
+\qquad E=-6.44,\ -1.62;
+\]
+$J^\pi=4^+$, basis $\ket{(1d_{5/2})^2}$, $\ket{(1d_{5/2})(1d_{3/2})}$,
+\[
+H(4^+)=
+\begin{pmatrix}
+-8.06 & -1.24\\
+-1.24 & -3.75
+\end{pmatrix},
+\qquad E=-8.39,\ -3.42.
+\]
+The diagonal elements are $\varepsilon_a+\varepsilon_b+\braket{ab;J|\op V|ab;J}$. The configuration mixing differs strongly between the blocks: the $4^+_1$ state is 93\,\% $(1d_{5/2})^2$ and the $3^+_1$ state 98\,\% $(1d_{5/2})(2s_{1/2})$, whereas the $2^+_1$ state is a strongly mixed state with 61\,\% $(1d_{5/2})^2$ and 32\,\% $(1d_{5/2})(2s_{1/2})$, because the two unperturbed configurations lie only 1~MeV apart. Note also that the $J=1$ and $J=3$ blocks contain no $(1d_{5/2})^2$, $(2s_{1/2})^2$ or $(1d_{3/2})^2$ components: for two identical nucleons in the same $j$ shell only even $J$ are allowed.
+The eigenvalues $E$ (relative to ${}^{16}$O$+2n$) of all blocks together form the spectrum shown in Fig.~\ref{fig:O18USD}. The yrast $2^+$, $4^+$ and the $3^+$ state are reproduced within a few hundred keV. Experimentally there are two $0^+$ states (3.63 and 5.34~MeV) and two $2^+$ states (3.92 and 5.25~MeV) where the $sd$ model space gives only one of each. The additional states are mainly deformed $4p$-$2h$ configurations (two nucleons excited from the $p$ shell of the ${}^{16}$O core), which lie outside the model space and mix with the $sd$ states (R.~D.~Lawson, F.~J.~D.~Serduke, H.~T.~Fortune, Phys.\ Rev.\ C \textbf{14}, 1245 (1976)).
+
+The same interaction, without any change of its parameters, can be applied to more valence nucleons; for $n$ particles the Hamiltonian matrix is built from the same $\varepsilon_a$ and two-body matrix elements (scaled by $(18/A)^{0.3}$), in a basis of $n$-particle Slater determinants (the $M$-scheme). Fig.~\ref{fig:O18USD} shows ${}^{19}$O and ${}^{20}$O (3 and 4 valence neutrons, $M$-scheme dimensions 37 and 81). The ground-state energies relative to ${}^{16}$O are $-16.06$ and $-23.83$~MeV, compared with the measured $-16.14$ and $-23.75$~MeV, and the low-lying levels are reproduced to typically 0.2--0.3~MeV. In ${}^{19}$O the $5/2^+$ ground state, the almost degenerate $3/2^+$ state (0.10~MeV) and the $9/2^+$ state (2.37~MeV) are dominated by the $(1d_{5/2})^3$ configuration, which for three neutrons allows $J=3/2,\,5/2,\,9/2$; the $1/2^+$ state (1.47~MeV) is mainly $(1d_{5/2})^2_{0}\,2s_{1/2}$. In ${}^{20}$O the $0^+$, $2^+$, $4^+$ sequence resembles that of ${}^{18}$O, with the core-excited intruder states no longer appearing at low energy.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{oxygen_usd.png}
+\caption{Positive-parity spectra of ${}^{18}$O, ${}^{19}$O and ${}^{20}$O (2, 3 and 4 valence neutrons): shell-model calculation in the $sd$ shell with the same USD single-particle energies and two-body matrix elements (B.~H.~Wildenthal, Prog.\ Part.\ Nucl.\ Phys.\ \textbf{11}, 5 (1984)), compared with experiment (ENSDF; evaluations D.~R.~Tilley \emph{et al.}, Nucl.\ Phys.\ A \textbf{595}, 1 (1995) for $A=18$, 19 and D.~R.~Tilley \emph{et al.}, Nucl.\ Phys.\ A \textbf{636}, 249 (1998) for $A=20$). Energies are given relative to ${}^{16}$O plus the valence neutrons, the experimental ground-state energies are from the AME2020 mass evaluation (M.~Wang \emph{et al.}, Chin.\ Phys.\ C \textbf{45}, 030003 (2021)). Experimental levels with a tentative spin are dashed; dotted lines connect the lowest state of each $J^\pi$.}
+\label{fig:O18USD}
+\end{figure}
 
 \subsection{Schematic interaction: \texorpdfstring{$\delta$}{delta}-force}
 Some schematic interactions can provide a useful insight into the many-body problem. Let us assume
